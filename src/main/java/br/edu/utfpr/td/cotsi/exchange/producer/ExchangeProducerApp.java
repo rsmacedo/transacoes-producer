@@ -14,10 +14,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 import br.edu.utfpr.td.cotsi.modelo.Transacao;
+import utils.LeitorArquivo;
 
 @SpringBootApplication
 @ComponentScan("br.edu.utfpr.td.cotsi.transacoes.producer")
-public class TransacoesProducerApp {
+public class ExchangeProducerApp {
 
 	@Autowired
 	private AmqpAdmin amqpAdmin;
@@ -28,7 +29,7 @@ public class TransacoesProducerApp {
 	private Queue filaTransacoes;
 
 	public static void main(String[] args) throws Exception {
-		SpringApplication.run(TransacoesProducerApp.class, args);
+		SpringApplication.run(ExchangeProducerApp.class, args);
 	}
 
 	@PostConstruct
