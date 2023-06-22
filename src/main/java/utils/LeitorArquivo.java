@@ -1,4 +1,4 @@
-package br.edu.utfpr.td.cotsi.transacoes.producer;
+package utils;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,6 +9,8 @@ import java.util.List;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
+
+import br.edu.utfpr.td.cotsi.modelo.Transacao;
 
 public class LeitorArquivo {
 

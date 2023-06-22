@@ -1,4 +1,4 @@
-package br.edu.utfpr.td.cotsi.transacoes.producer;
+package br.edu.utfpr.td.cotsi.modelo;
 
 public class Transacao {
 

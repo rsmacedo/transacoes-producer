@@ -1,11 +1,8 @@
-package br.edu.utfpr.td.cotsi.transacoes.producer;
-
-import java.util.List;
+package br.edu.utfpr.td.cotsi.transacoes.consumer;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.amqp.core.AmqpAdmin;
-import org.springframework.amqp.core.FanoutExchange;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,12 +10,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-import br.edu.utfpr.td.cotsi.modelo.Transacao;
-import utils.LeitorArquivo;
-
 @SpringBootApplication
-@ComponentScan("br.edu.utfpr.td.cotsi.transacoes.producer")
-public class TransacoesProducerApp {
+@ComponentScan("br.edu.utfpr.td.cotsi.transacoes.consumer")
+public class TransacoesConsumerApp {
 
 	@Autowired
 	private AmqpAdmin amqpAdmin;
@@ -29,20 +23,14 @@ public class TransacoesProducerApp {
 	private Queue filaTransacoes;
 
 	public static void main(String[] args) throws Exception {
-		SpringApplication.run(TransacoesProducerApp.class, args);
+		SpringApplication.run(TransacoesConsumerApp.class, args);
 	}
 
 	@PostConstruct
 	public void criarFila() {
 		filaTransacoes = new Queue("transacoes.financeiras", true);
-		amqpAdmin.declareQueue(filaTransacoes);
-		processarArquivotransacoes();
+		amqpAdmin.declareQueue(filaTransacoes);		
 	}
 
-	public void processarArquivotransacoes() {
-		List<Transacao> transacoes = new LeitorArquivo().lerArquivo();
-		for (Transacao transacao : transacoes) {
-			rabbitTemplate.convertAndSend(this.filaTransacoes.getName(), transacao.toString());
-		}
-	}
+	
 }

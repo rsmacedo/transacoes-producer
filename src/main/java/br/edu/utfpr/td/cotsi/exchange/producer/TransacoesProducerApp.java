@@ -1,4 +1,4 @@
-package br.edu.utfpr.td.cotsi.transacoes.producer;
+package br.edu.utfpr.td.cotsi.exchange.producer;
 
 import java.util.List;
 
@@ -14,7 +14,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 import br.edu.utfpr.td.cotsi.modelo.Transacao;
-import utils.LeitorArquivo;
 
 @SpringBootApplication
 @ComponentScan("br.edu.utfpr.td.cotsi.transacoes.producer")
