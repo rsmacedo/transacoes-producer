@@ -24,6 +24,7 @@ public class Producer {
 
 	private FanoutExchange fanout = new FanoutExchange("transacoes.financeiras", true, false);
 
+	/*
 	@PostConstruct
 	public void criarFila() {
 		filaTransacoes = new Queue("transacoes.suspeitas", true);
@@ -32,6 +33,7 @@ public class Producer {
 		//processarArquivotransacoes();
 		//rabbitTemplate.convertAndSend(fanout.getName(), "", msg);
 	}
+	*/
 
 	/*public void processarArquivotransacoes() {
 		List<br.edu.utfpr.td.cotsi.modelo.Transacao> transacoes = new utils.LeitorArquivo().lerArquivo();

@@ -42,7 +42,7 @@ public class TransacoesProducerApp {
 	public void processarArquivotransacoes() {
 		List<Transacao> transacoes = new LeitorArquivo().lerArquivo();
 		for (Transacao transacao : transacoes) {
-			rabbitTemplate.convertAndSend(this.filaTransacoes.getName(), transacao.toString());
+			rabbitTemplate.convertAndSend(this.filaTransacoes.getName(), transacao);
 			
 		}
 	}

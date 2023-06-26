@@ -1,7 +1,11 @@
 package br.edu.utfpr.td.cotsi.modelo;
 
-public class Transacao {
+import java.io.Serializable;
 
+public class Transacao implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	
 	private String codigo;
 	private String cedente;
 	private String pagador;
