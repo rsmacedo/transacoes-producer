@@ -22,6 +22,9 @@
 	<build>
 		<plugins>
 			<plugin>
+				<configuration>
+					<mainClass>br.edu.utfpr.td.cotsi.transacoes.producer.TransacoesProducerApp</mainClass>
+				</configuration>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<executions>
