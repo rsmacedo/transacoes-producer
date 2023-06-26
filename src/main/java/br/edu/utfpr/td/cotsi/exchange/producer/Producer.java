@@ -28,13 +28,15 @@ public class Producer {
 	public void criarFila() {
 		filaTransacoes = new Queue("transacoes.suspeitas", true);
 		amqpAdmin.declareQueue(filaTransacoes);
-		processarArquivotransacoes();
+		//String msg = String.format("Processando transacao suspeita");
+		//processarArquivotransacoes();
+		//rabbitTemplate.convertAndSend(fanout.getName(), "", msg);
 	}
 
-	public void processarArquivotransacoes() {
+	/*public void processarArquivotransacoes() {
 		List<br.edu.utfpr.td.cotsi.modelo.Transacao> transacoes = new utils.LeitorArquivo().lerArquivo();
 		for (br.edu.utfpr.td.cotsi.modelo.Transacao transacao : transacoes) {
 			rabbitTemplate.convertAndSend(this.filaTransacoes.getName(), transacao.toString());
 		}
-	}
+	}*/
 }
