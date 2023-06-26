@@ -24,7 +24,7 @@ public class Listener {
 	public void processarTransacao(Transacao t) {
 		try
 		{
-		    Thread.sleep(10);
+		    Thread.sleep(1000);
 		    System.out.println(t);
 		    if(identificarTransacaoSuspeita(t)) {
 		    	String msg = String.format("Processando transacao suspeita");

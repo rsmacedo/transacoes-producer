@@ -10,14 +10,14 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.amqp.core.Queue;
 
 @SpringBootApplication
-@ComponentScan("br.edu.utfpr.td.cotsi.exchange")
-public class ExchangeConsumerApp {
+//@ComponentScan("br.edu.utfpr.td.cotsi.exchange")
+public class ReceitaConsumerApp {
 
 	@Autowired
 	private AmqpAdmin amqpAdmin;
 
 	public static void main(String[] args) {
-		SpringApplication.run(ExchangeConsumerApp.class, args);
+		SpringApplication.run(ReceitaConsumerApp.class, args);
 	}
 
 	@PostConstruct

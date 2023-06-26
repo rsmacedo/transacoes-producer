@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("br.edu.utfpr.td.cotsi.transacoes.producer")
+//@ComponentScan("br.edu.utfpr.td.cotsi.transacoes.producer")
 public class ExchangeProducerApp {
 
 	@Autowired
