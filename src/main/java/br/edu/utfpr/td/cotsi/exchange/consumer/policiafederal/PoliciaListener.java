@@ -10,7 +10,7 @@ public class PoliciaListener {
 
 	@RabbitListener(queues = "policia.federal")
 	public void listen (Transacao t) {
-		System.out.println(t);
+		System.out.println("Processando transação suspeita: " + t);
 	}
 
 }

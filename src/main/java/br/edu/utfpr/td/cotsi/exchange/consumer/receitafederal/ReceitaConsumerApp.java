@@ -18,6 +18,7 @@ public class ReceitaConsumerApp {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ReceitaConsumerApp.class, args);
+		System.out.println("Receita Federal");
 	}
 
 	@PostConstruct

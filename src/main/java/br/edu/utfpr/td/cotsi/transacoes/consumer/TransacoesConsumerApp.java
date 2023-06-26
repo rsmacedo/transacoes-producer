@@ -4,7 +4,6 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.Queue;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,9 +15,6 @@ public class TransacoesConsumerApp {
 
 	@Autowired
 	private AmqpAdmin amqpAdmin;
-
-	@Autowired
-	private RabbitTemplate rabbitTemplate;
 
 	private Queue filaTransacoes;
 

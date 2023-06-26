@@ -7,11 +7,9 @@ import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.FanoutExchange;
 import org.springframework.amqp.core.Queue;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 //@ComponentScan("br.edu.utfpr.td.cotsi.transacoes.producer")
@@ -19,9 +17,6 @@ public class ExchangeProducerApp {
 
 	@Autowired
 	private AmqpAdmin amqpAdmin;
-
-	@Autowired
-	private RabbitTemplate rabbitTemplate;
 
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(ExchangeProducerApp.class, args);

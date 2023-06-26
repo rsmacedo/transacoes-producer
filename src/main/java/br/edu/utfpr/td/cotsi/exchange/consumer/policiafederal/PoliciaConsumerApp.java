@@ -18,6 +18,7 @@ public class PoliciaConsumerApp {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PoliciaConsumerApp.class, args);
+		System.out.println("Policia Federal");
 	}
 
 	@PostConstruct
